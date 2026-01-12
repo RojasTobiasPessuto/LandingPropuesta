@@ -737,7 +737,6 @@ export default function App() {
             >
               <Card className="p-8 bg-gradient-to-br from-purple-500/30 to-pink-500/20 backdrop-blur-xl border-purple-400/50 h-full relative overflow-hidden group shadow-2xl shadow-purple-500/20">
                 <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-1 text-white text-sm font-semibold rounded-bl-xl">
-                  Recomendado
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-500" />
                 <div className="relative z-10 mt-4">
