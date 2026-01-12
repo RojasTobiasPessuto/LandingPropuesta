@@ -109,22 +109,6 @@ export default function App() {
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-wrap gap-4 justify-center items-center"
-            >
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-                <Sparkles className="w-4 h-4 text-cyan-400" />
-                <span className="text-slate-300">Propuesta N°1</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-                <Rocket className="w-4 h-4 text-purple-400" />
-                <span className="text-slate-300">Alternativa 1</span>
-              </div>
-            </motion.div>
-
             {/* Floating elements */}
             <div className="mt-20 relative h-40">
               <motion.div
@@ -216,7 +200,7 @@ export default function App() {
                       </div>
                       <div>
                         <h4 className="text-xl font-semibold mb-2 text-white">Diagnóstico Intensivo</h4>
-                        <p className="text-slate-300">10 días de análisis profundo y diseño de roadmap</p>
+                        <p className="text-slate-300">20 días de análisis profundo y diseño de roadmap</p>
                       </div>
                     </div>
 
@@ -261,7 +245,7 @@ export default function App() {
               { icon: FileText, color: "from-orange-500 to-yellow-500", title: "Procesos manuales y baja trazabilidad", desc: "Gestión basada en planillas y documentos sin integración ni historial centralizado." },
               { icon: Zap, color: "from-yellow-500 to-green-500", title: "Falta de automatización en atención", desc: "Respuestas y seguimientos realizados de forma manual, limitando capacidad de escala." },
               { icon: Users, color: "from-green-500 to-cyan-500", title: "Captación sin sistema ni métricas", desc: "Ausencia de un proceso estructurado para adquisición y seguimiento de leads." },
-              { icon: BarChart3, color: "from-cyan-500 to-blue-500", title: "Ausencia de dashboards y KPIs claros", desc: "No hay visibilidad en tiempo real sobre el estado del negocio ni indicadores de rendimiento." },
+              { icon: BarChart3, color: "from-cyan-500 to-blue-500", title: "Ausencia de dashboards y KPIs claros", desc: "Poca visibilidad en tiempo real sobre el estado del negocio ni indicadores de rendimiento." },
               { icon: Database, color: "from-blue-500 to-purple-500", title: "Datos dispersos y sin centralización", desc: "Información almacenada en múltiples fuentes sin integración ni posibilidad de análisis." },
             ].map((item, index) => (
               <motion.div
@@ -308,7 +292,7 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Database, color: "from-blue-500 to-cyan-500", title: "Digitalización de captura de datos", desc: "Implementar formularios digitales y sistemas de registro que eliminen la dependencia de papel y planillas." },
+              { icon: Database, color: "from-blue-500 to-cyan-500", title: "Digitalización de captura de datos", desc: "Implementar formularios digitales y sistemas de registro que eliminen la dependencia de papel y planillas, todo en un solo lugar" },
               { icon: Users, color: "from-green-500 to-emerald-500", title: "Sistema de gestión integral", desc: "Centralizar la gestión de clientes, profesionales y servicios en una plataforma unificada." },
               { icon: Zap, color: "from-purple-500 to-pink-500", title: "Automatización de atención inicial", desc: "Configurar respuestas automáticas y flujos de trabajo para agilizar la atención a consultas." },
               { icon: TrendingUp, color: "from-orange-500 to-red-500", title: "Sistema de adquisición y seguimiento", desc: "Implementar procesos estructurados para captación, seguimiento y conversión de potenciales clientes." },
@@ -371,7 +355,7 @@ export default function App() {
                 <h3 className="text-3xl font-bold text-white">Fase 1 – Diagnóstico y Roadmap</h3>
                 <div className="flex items-center gap-2 mt-2">
                   <Clock className="w-5 h-5 text-cyan-400" />
-                  <span className="text-xl text-cyan-400">10 días</span>
+                  <span className="text-xl text-cyan-400">20 días</span>
                 </div>
               </div>
             </div>
@@ -644,7 +628,7 @@ export default function App() {
                   </p>
                   <div className="flex items-center gap-2 text-cyan-400 text-lg">
                     <Clock className="w-5 h-5" />
-                    <span className="font-semibold">10 días</span>
+                    <span className="font-semibold">20 días</span>
                   </div>
                 </Card>
                 <div className="absolute right-0 w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-3xl font-bold shadow-2xl shadow-blue-500/50 -translate-x-1/2">
@@ -684,7 +668,7 @@ export default function App() {
 
       {/* Inversión */}
       <section className="relative py-32 px-6 bg-gradient-to-b from-blue-950/20 to-transparent">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -697,56 +681,232 @@ export default function App() {
                 Inversión
               </span>
             </h2>
+            <p className="text-xl text-slate-400">Opciones flexibles para tu proyecto</p>
           </motion.div>
 
+          {/* Pricing Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Pago Mensual */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+            >
+              <Card className="p-8 bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-xl border-white/20 h-full relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 group-hover:from-blue-500/20 group-hover:to-cyan-500/10 transition-all duration-500" />
+                <div className="relative z-10">
+                  <Badge className="mb-4 bg-blue-500/20 text-blue-300 border-blue-500/30">Mensual</Badge>
+                  <div className="mb-6">
+                    <div className="text-5xl font-bold text-white mb-2">$1,500</div>
+                    <div className="text-slate-400">USD/mes</div>
+                    <div className="text-sm text-slate-500 mt-2">Pago por adelantado</div>
+                  </div>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Máxima flexibilidad</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Sin compromiso anual</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Cancelación con 30 días de aviso</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/10">
+                    <div className="text-sm text-slate-400">Total anual</div>
+                    <div className="text-2xl font-bold text-white">$18,000 USD</div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* Pago Semestral - Destacado */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.02 }}
+            >
+              <Card className="p-8 bg-gradient-to-br from-purple-500/30 to-pink-500/20 backdrop-blur-xl border-purple-400/50 h-full relative overflow-hidden group shadow-2xl shadow-purple-500/20">
+                <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-1 text-white text-sm font-semibold rounded-bl-xl">
+                  Recomendado
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-500" />
+                <div className="relative z-10 mt-4">
+                  <Badge className="mb-4 bg-purple-500/30 text-purple-200 border-purple-400/50">Semestral</Badge>
+                  <div className="mb-6">
+                    <div className="text-5xl font-bold text-white mb-2">$8,500</div>
+                    <div className="text-slate-300">USD/semestre</div>
+                    <div className="text-sm text-slate-400 mt-2">Pago por adelantado</div>
+                  </div>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-purple-300 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-200 text-sm font-medium">Ahorro de $500 USD por semestre</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-purple-300 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-200 text-sm">Mejor relación costo-beneficio</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-purple-300 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-200 text-sm">Prioridad en soporte</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/20">
+                    <div className="text-sm text-slate-300">Total anual</div>
+                    <div className="text-2xl font-bold text-white">$17,000 USD</div>
+                    <div className="text-sm text-green-400 mt-1">Ahorra $1,000 USD al año</div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* Pago Anual */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+            >
+              <Card className="p-8 bg-gradient-to-br from-green-500/20 to-emerald-500/10 backdrop-blur-xl border-green-400/30 h-full relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/5 group-hover:from-green-500/20 group-hover:to-emerald-500/10 transition-all duration-500" />
+                <div className="relative z-10">
+                  <Badge className="mb-4 bg-green-500/20 text-green-300 border-green-500/30">Anual</Badge>
+                  <div className="mb-6">
+                    <div className="text-5xl font-bold text-white mb-2">$15,000</div>
+                    <div className="text-slate-400">USD/año</div>
+                    <div className="text-sm text-slate-500 mt-2">Pago por adelantado</div>
+                  </div>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm font-medium">Máximo ahorro: $3,000 USD</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">16.7% de descuento</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Soporte prioritario 24/7</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Sesiones extra de consultoría</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/10">
+                    <div className="flex items-center gap-2">
+                      <Sparkles className="w-5 h-5 text-green-400" />
+                      <span className="text-green-400 font-semibold">Mejor valor</span>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+
+          {/* Comparación de planes */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Card className="p-10 bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-xl border-white/20 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent" />
-              <div className="relative z-10 space-y-8">
-                <div className="flex items-start gap-6 pb-8 border-b border-white/10">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                    <DollarSign className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-3 text-white">Fase 1 – Diagnóstico y Roadmap</h3>
-                    <p className="text-slate-300 text-lg leading-relaxed">
-                      Inversión fija a definir que incluye relevamiento completo, análisis, documentación y roadmap anual priorizado
-                    </p>
-                  </div>
+            <Card className="p-8 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border-white/10">
+              <h3 className="text-2xl font-bold mb-6 text-white text-center">¿Qué incluye cada plan?</h3>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-blue-400 mb-4">Todos los planes incluyen:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Implementación completa</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Automatizaciones ilimitadas</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Dashboards personalizados</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Capacitación del equipo</span>
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="flex items-start gap-6 pb-8 border-b border-white/10">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
-                    <DollarSign className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-3 text-white">Fase 2 – Implementación Anual</h3>
-                    <p className="text-slate-300 text-lg leading-relaxed">
-                      Inversión mensual que incluye implementación de sistemas, automatizaciones, dashboards, capacitación y consultoría continua durante 12 meses
-                    </p>
-                  </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-400 mb-4">Planes Semestral y Anual:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Revisión estratégica trimestral</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Acceso a nuevas funcionalidades</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Soporte prioritario</span>
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center flex-shrink-0">
-                    <AlertCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-3 text-white">Licencias y Plataformas</h3>
-                    <p className="text-slate-300 text-lg leading-relaxed">
-                      Las licencias de software necesarias (CRM, automatización, etc.) corren por cuenta del cliente. Se proveerá listado detallado durante la Fase 1
-                    </p>
-                  </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-green-400 mb-4">Exclusivo Plan Anual:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Roadmap tecnológico anual</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Consultoría estratégica mensual</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-sm">Optimizaciones proactivas</span>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+            </Card>
+          </motion.div>
 
-                <div className="mt-8 p-6 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl border border-blue-400/30">
-                  <p className="text-slate-200 leading-relaxed">
-                    <strong className="text-white">Nota importante:</strong> Los montos finales de inversión se definirán tras completar la Fase 1 de diagnóstico, momento en el cual se tendrá visibilidad completa del alcance, complejidad y recursos necesarios para la Fase 2.
+          {/* Nota adicional */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-12"
+          >
+            <Card className="p-6 bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-xl border-orange-400/30">
+              <div className="flex items-start gap-4">
+                <AlertCircle className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Importante sobre licencias</h4>
+                  <p className="text-slate-300 leading-relaxed">
+                    Las licencias de software necesarias (CRM, automatización, herramientas de análisis, etc.) corren por cuenta del cliente. Durante la Fase 1 de diagnóstico se proveerá un listado detallado con costos estimados de las plataformas recomendadas según las necesidades específicas de AMP.
                   </p>
                 </div>
               </div>
