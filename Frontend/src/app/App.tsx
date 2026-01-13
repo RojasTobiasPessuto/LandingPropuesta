@@ -176,7 +176,7 @@ export default function App() {
               <Card className="p-8 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
                 <Globe className="w-12 h-12 text-purple-400 mb-4 group-hover:scale-110 transition-transform" />
                 <p className="text-lg text-slate-300 leading-relaxed">
-                  Estableceremos un <span className="text-white font-semibold">sistema robusto de métricas</span> para la toma de decisiones basada en datos, con dashboards en tiempo real del estado del negocio.
+                  Estableceremos un <span className="text-white font-semibold">sistema robusto de tecnologia</span> para la centralizacion de datos facilitando la toma de deciciones, con dashboards en tiempo real del estado del negocio.
                 </p>
               </Card>
             </motion.div>
@@ -200,7 +200,6 @@ export default function App() {
                       </div>
                       <div>
                         <h4 className="text-xl font-semibold mb-2 text-white">Diagnóstico Intensivo</h4>
-                        <p className="text-slate-300">20 días de análisis profundo y diseño de roadmap</p>
                       </div>
                     </div>
 
@@ -210,7 +209,6 @@ export default function App() {
                       </div>
                       <div>
                         <h4 className="text-xl font-semibold mb-2 text-white">Implementación Continua</h4>
-                        <p className="text-slate-300">12 meses de desarrollo y acompañamiento</p>
                       </div>
                     </div>
                   </div>
@@ -631,7 +629,7 @@ export default function App() {
                     <span className="font-semibold">20 días</span>
                   </div>
                 </Card>
-                <div className="absolute right-0 w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-3xl font-bold shadow-2xl shadow-blue-500/50 -translate-x-1/2">
+                <div className="absolute -right-10 w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-3xl font-bold shadow-2xl shadow-blue-500/50 -translate-x-0">
                   1
                 </div>
               </div>
